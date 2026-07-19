@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var outerEl = document.getElementById('heroScaleOuter');
         if (!scaleEl || !outerEl) return;
         var DESIGN_WIDTH = 1240;
-        if (window.innerWidth >= DESIGN_WIDTH) {
+        if (window.innerWidth >= DESIGN_WIDTH || window.innerWidth <= 700) {
             scaleEl.style.transform = '';
             outerEl.style.height = '';
             return;

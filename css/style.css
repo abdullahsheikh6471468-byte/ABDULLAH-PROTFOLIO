@@ -973,6 +973,87 @@ h4 {
     }
 }
 
+/* ---------------------------------------------------------------------
+   PHONES (≤700px): stop shrinking the desktop layout down and instead
+   lay the hero out the way a phone actually reads — tagline, big title,
+   photo, blurb, buttons, stacked top to bottom and centered. This is a
+   real reflow, not a shrunk clone, so nothing gets crushed or clipped.
+--------------------------------------------------------------------- */
+@media (max-width: 700px) {
+    .hero-scale-outer {
+        height: auto !important;
+        overflow: visible;
+    }
+    .hero-scale {
+        transform: none !important;
+        position: static;
+        left: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    .hero-top-row {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    .hero-frame-outer {
+        padding: 0 12px;
+    }
+    .hero-frame {
+        min-height: 0;
+        padding: 28px 12px 34px;
+    }
+    /* the floating ambient chips don't have room in a stacked layout */
+    .skill-chip {
+        display: none;
+    }
+    .hero-title-wrap {
+        flex-direction: column;
+    }
+    .hero-photo-center {
+        position: static;
+        transform: none !important;
+        margin-top: 40px;
+    }
+    .hero-photo-frame {
+        width: 340px;
+    }
+    .badge-ring {
+        width: 108px;
+        height: 108px;
+    }
+    .hero-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 22px;
+        margin-top: 30px;
+    }
+    .hero-col-left,
+    .hero-col-right {
+        text-align: center;
+        width: 100%;
+    }
+    .cat-list,
+    .quote-block {
+        display: none;
+    }
+    .hero-name {
+        font-size: 32px;
+    }
+    .hero-blurb {
+        margin: 8px auto 0;
+        max-width: 320px;
+    }
+    .stat-row {
+        justify-content: center;
+    }
+    .hero-cta-row {
+        justify-content: center;
+    }
+}
+
 
 
 @media(max-height:750px) and (min-width:1001px) {
@@ -1971,5 +2052,21 @@ h4 {
 @media(max-width:768px) {
     .wrap {
         padding: 0 22px;
+    }
+}
+
+@media(max-width:420px) {
+    .nav-inner {
+        padding: 0 4px;
+    }
+    .logo-text {
+        font-size: 13px;
+        letter-spacing: .03em;
+    }
+    .site-nav {
+        padding: 16px 0;
+    }
+    .site-nav.scrolled {
+        padding: 12px 0;
     }
 }
