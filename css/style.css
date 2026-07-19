@@ -682,6 +682,7 @@ h4 {
 
 .hero-col-left {
     padding-bottom: 0;
+    min-width: 0;
 }
 
 .cat-list {
@@ -735,6 +736,7 @@ h4 {
 .hero-col-right {
     padding-bottom: 0;
     text-align: right;
+    min-width: 0;
 }
 
 .hero-name {
@@ -894,33 +896,33 @@ h4 {
        screen *and then* shrunk again by that transform — text and the photo
        end up much smaller than intended. Fixed values = shrunk only once. */
     .hero-top-row {
-        margin-bottom: 18px;
+        margin-bottom: 20px;
     }
     .hero-frame-outer {
-        padding: 0 16px;
+        padding: 0 12px;
     }
     .hero-frame {
-        min-height: 500px;
-        padding: 36px 32px;
+        min-height: 640px;
+        padding: 40px 28px;
     }
     .hero-giant {
         margin: 6px 0;
     }
     .hero-photo-frame {
-        width: 300px;
+        width: 380px;
     }
     .badge-ring {
-        width: 104px;
-        height: 104px;
+        width: 130px;
+        height: 130px;
     }
     .hero-body {
-        margin-top: 28px;
+        margin-top: 32px;
     }
     .cat-list {
-        margin-bottom: 24px;
+        margin-bottom: 26px;
     }
     .hero-name {
-        font-size: 36px;
+        font-size: 40px;
     }
 }
 
