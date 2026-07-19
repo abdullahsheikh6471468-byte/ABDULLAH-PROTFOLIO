@@ -877,6 +877,20 @@ h4 {
     transform-origin: top center;
 }
 
+/* Below the 1240px design width, JS shrinks the whole hero (scaleHeroDesktop
+   in main.js) to fit the narrower screen. Once it's shrunk, the section no
+   longer needs to fill the full screen height — if it still does (min-height:
+   100vh), the flex-centering leaves a huge empty gap above/below the shrunk
+   content on phones. So on those widths, let the hero size itself to its
+   (now smaller) content instead of forcing a full viewport height. */
+@media (max-width: 1239px) {
+    .hero {
+        min-height: 0;
+        padding-top: min(72px, 8vh);
+        padding-bottom: min(32px, 4vh);
+    }
+}
+
 
 
 @media(max-height:750px) and (min-width:1001px) {
