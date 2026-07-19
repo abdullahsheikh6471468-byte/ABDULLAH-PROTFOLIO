@@ -902,18 +902,18 @@ h4 {
         padding: 0 12px;
     }
     .hero-frame {
-        min-height: 640px;
+        min-height: 680px;
         padding: 40px 28px;
     }
     .hero-giant {
         margin: 6px 0;
     }
     .hero-photo-frame {
-        width: 380px;
+        width: 410px;
     }
     .badge-ring {
-        width: 130px;
-        height: 130px;
+        width: 140px;
+        height: 140px;
     }
     .hero-body {
         margin-top: 32px;
@@ -921,8 +921,45 @@ h4 {
     .cat-list {
         margin-bottom: 26px;
     }
+    .cat-list li {
+        font-size: 15px;
+    }
+    .quote-block {
+        max-width: 340px;
+    }
+    .quote-mark {
+        font-size: 32px;
+    }
+    .quote-block p {
+        font-size: 17px;
+    }
     .hero-name {
-        font-size: 40px;
+        font-size: 44px;
+    }
+    .hero-role {
+        font-size: 14px;
+    }
+    .hero-blurb {
+        font-size: 16px;
+        max-width: 340px;
+    }
+    .stat-icon {
+        width: 38px;
+        height: 38px;
+    }
+    .stat-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+    .stat-num {
+        font-size: 20px;
+    }
+    .stat-label {
+        font-size: 12px;
+    }
+    .hero-cta-row .btn {
+        padding: 14px 26px;
+        font-size: 14px;
     }
 }
 
