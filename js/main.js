@@ -182,12 +182,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function scaleHeroDesktop() {
+        var scaleEl = document.getElementById('heroScale');
+        var outerEl = document.getElementById('heroScaleOuter');
+        if (!scaleEl || !outerEl) return;
+        var DESIGN_WIDTH = 1240;
+        if (window.innerWidth >= DESIGN_WIDTH) {
+            scaleEl.style.transform = '';
+            outerEl.style.height = '';
+            return;
+        }
+        scaleEl.style.transform = 'scale(1)';
+        var naturalHeight = scaleEl.offsetHeight;
+        var scale = window.innerWidth / DESIGN_WIDTH;
+        scaleEl.style.transform = 'scale(' + scale + ')';
+        outerEl.style.height = (naturalHeight * scale) + 'px';
+    }
+    window.addEventListener('load', scaleHeroDesktop);
+    window.addEventListener('resize', scaleHeroDesktop);
+    window.addEventListener('load', function () { setTimeout(scaleHeroDesktop, 300); });
+
     function fitHeroGiant() {
         var el = document.getElementById('heroGiant');
         if (!el) return;
         var container = el.closest('.hero-title-wrap');
         el.style.transform = 'scale(1)';
-        var targetWidth = container.clientWidth * 0.96; // 96% of frame width
+        var targetWidth = container.getBoundingClientRect().width * 0.96; // 96% of frame width (same coordinate space as textWidth, so ancestor scaling cancels out)
         var textWidth = el.getBoundingClientRect().width;
         var scale = targetWidth / textWidth;
         el.style.transform = 'scale(' + scale + ')';
