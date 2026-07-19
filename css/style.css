@@ -889,6 +889,39 @@ h4 {
         padding-top: min(72px, 8vh);
         padding-bottom: min(32px, 4vh);
     }
+    /* These are all inside #heroScale, which JS already shrinks to fit the
+       screen width. Any vw/vh here would get sized against the real phone
+       screen *and then* shrunk again by that transform — text and the photo
+       end up much smaller than intended. Fixed values = shrunk only once. */
+    .hero-top-row {
+        margin-bottom: 16px;
+    }
+    .hero-frame-outer {
+        padding: 0 20px;
+    }
+    .hero-frame {
+        min-height: 420px;
+        padding: 32px 28px;
+    }
+    .hero-giant {
+        margin: 6px 0;
+    }
+    .hero-photo-frame {
+        width: 235px;
+    }
+    .badge-ring {
+        width: 88px;
+        height: 88px;
+    }
+    .hero-body {
+        margin-top: 24px;
+    }
+    .cat-list {
+        margin-bottom: 22px;
+    }
+    .hero-name {
+        font-size: 32px;
+    }
 }
 
 
